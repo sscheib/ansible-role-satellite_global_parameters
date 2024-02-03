@@ -1,0 +1,30 @@
+---
+# settings to use when synchronizing templates
+_sat_global_parameters: '{{ sat_global_parameters | mandatory }}'
+
+# these variables need to be either specified directly or be specified by
+# an environment variable
+#
+# possible environment variables:
+# - satellite_username: SATELLITE_USERNAME, SATELLITE_USER
+# - satellite_password: SATELLITE_PASSWORD
+# - satellite_server_url: SATELLITE_SERVER_URL, SATELLITE_SERVER, SATELLITE_URL
+
+# username to authenticate with against the Satellite API
+_satellite_username: '{{ satellite_username | default(None) }}'
+
+# password of the user to authenticate with against the Satellite API
+_satellite_password: '{{ satellite_password | default(None) }}'
+
+# URL to the Satellite API (including http/s://)
+_satellite_server_url: '{{ satellite_server_url | default(None) }}'
+
+# whether to validate certificates when connecting to the Satellite API
+_satellite_validate_certs: '{{ satellite_validate_certs | default(_def_satellite_validate_certs) }}'
+
+# allowed parameter_types to validate against
+_sat_allowed_parameter_types: '{{ sat_allowed_parameter_types | default(_def_sat_allowed_parameter_types) }}'
+
+# whether to quiet assert
+_sat_quiet_assert: '{{ sat_quiet_assert | default(_def_sat_quiet_assert) }}'
+...

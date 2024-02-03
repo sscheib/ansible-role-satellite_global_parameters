@@ -1,0 +1,21 @@
+---
+galaxy_info:
+  role_name: 'satellite_global_parameters'
+  namespace: 'sscheib'
+  author: 'Steffen Scheib'
+  description: 'This role creates Global Parameters in a Red Hat Satellite'
+  issue_tracker_url: 'https://github.com/sscheib/ansible-role-satellite_global_parameters/issues'
+  license: 'GPL-2.0-or-later'
+  min_ansible_version: '2.12'
+  platforms:
+    - name: 'EL'
+      versions:
+        - '8'
+
+  galaxy_tags:
+    - 'rhel'
+    - 'katello'
+    - 'satellite'
+
+dependencies: []
+...

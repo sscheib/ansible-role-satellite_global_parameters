@@ -1,0 +1,18 @@
+---
+# whether to validate certificates when connecting to the Satellite API
+_def_satellite_validate_certs: true
+
+# whether to quiet assert
+_def_sat_quiet_assert: true
+
+# allowed parameter_types
+_def_sat_allowed_parameter_types:
+  - 'string'
+  - 'boolean'
+  - 'integer'
+  - 'real'
+  - 'array'
+  - 'hash'
+  - 'yaml'
+  - 'json'
+...
