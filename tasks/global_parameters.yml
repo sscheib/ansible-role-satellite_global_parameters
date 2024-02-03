@@ -10,7 +10,7 @@
     parameter_type: '{{ __t_param.parameter_type | default(omit) }}'
     hidden_value: '{{ __t_param.hidden_value | default(omit) }}'
     state: 'present'
-  no_log: '{{ __t_param.hidden_value is defined }}'
+  no_log: '{{ __t_param.hidden_value | default(false) }}'
   loop: '{{ _sat_global_parameters }}'
   loop_control:
     loop_var: '__t_param'
